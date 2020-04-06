@@ -7,7 +7,7 @@ public class L2_Ex9
 
 	if (max>=a && a>=min) mid = a;
 	if (max>=b && b>=min) mid = b;
-    if (max>=c && c>=min) mid = c;	
+    	if (max>=c && c>=min) mid = c;	
 	
     System.out.println( "" + min +  mid + max    );
 
