@@ -1,0 +1,84 @@
+********** Test Time1 - Started **********
+
+
+1. Testing Constructors and toString:
+	t1=17:45
+	t2=17:45
+	t33=00:00
+
+2. Testing accessors and mutators:
+	t1=20:10
+	Hour   of t1=20
+	Minute of t1=10
+
+2. Testing out of range setters:
+	t1=00:00
+	Hour   of t33=0
+	Minute of t33=0
+
+3. Testing minFromMidnight method:
+	t1=10:15
+	Minutes from midnight of t1=615
+
+3. Testing minFromMidnight method:
+	t33=00:00
+	Minutes from midnight of t33=0
+
+3. Testing minFromMidnight method:
+	t1=23:59
+	Minutes from midnight of t1=1439
+
+4. Testing equals method:
+	t3=12:34
+	t4=23:45
+	t33=23:45
+	t3=12:34 = t4=23:45 ? false
+	t33=23:45 = t4=23:45 ? true
+	t34=23:46 = t4=23:45 ? false
+	t35=22:45 = t4=23:45 ? false
+
+5. Testing before method:
+	t3=12:34 before t4=23:45 ? true
+	t33=23:45 before t4=23:45 ? false
+	t34=23:46 before t4=23:45 ? false
+	t35=22:45 before t4=23:45 ? true
+	t35=23:44 before t4=23:45 ? true
+
+6. Testing after method:
+	t3=12:34 after t4=23:45 ? false
+	t33=23:45 after t4=23:45 ? false
+	t34=23:46 after t4=23:45 ? true
+	t35=22:45 after t4=23:45 ? false
+	t35=23:44 after t4=23:45 ? false
+
+	t3=12:34 after t3=12:34 ? true
+	tt4=23:45 after t33=23:45 ? false
+	tt4=23:45 after t34=23:46 ? false
+	tt4=23:45 after t35=22:45 ? true
+	tt4=23:45 after t36=23:44 ? true
+
+7. Testing difference method:
+	t1=11:25
+	t2=10:15
+	The difference between 11:25 and 10:15 is : 70 min
+	The difference between 23:45 and 23:45 is : 0 min
+	The difference between 23:45 and 23:46 is : -1 min
+	The difference between 23:45 and 22:45 is : 60 min
+	The difference between 23:45 and 23:44 is : 1 min
+
+8. Testing addMinutes method:
+	t1=11:25
+	Adding 10 minutes to t1=11:35
+	Adding 20 minutes to 23:45= 00:05
+	Adding 48 hours and -5 min to 23:45= 23:40
+	Adding 48 hours and +5 min to 23:45= 23:50
+	Adding 48 hours to 23:45= 23:45
+	Adding -48 hours to 23:45= 23:45
+	Adding -48 hours to 23:45= 23:45
+	Adding -10 minutes to 00:05= 23:55
+	Adding -48 hours and -6 min to 00:05= 23:59
+	Adding -48 hours and +6 min to 00:05= 00:11
+
+********** Test Time1 - Finished **********
+
+

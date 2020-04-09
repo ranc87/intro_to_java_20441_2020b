@@ -1,0 +1,40 @@
+********** Test Train - Started **********
+
+1. Testing Constructors and toString:
+	Train 1: Train to Paris departs at 12:30. Train is not full.
+	Train 2: Train to Paris departs at 12:30. Train is not full.
+
+2. Testing accessors and mutators:
+	Train 1 destination: Paris
+	Train 1 departure: 12:30
+	Train 1 duration: 90
+	Train 1 passengers: 70
+	Train 1 seats: 100
+	Train 1 price: 10
+	Train 2: Train to London departs at 17:15. Train is not full.
+
+3. Testing equal method:
+	Train 1: Train to Paris departs at 12:30. Train is not full.
+	Train 2: Train to London departs at 17:15. Train is not full.
+	Train 1 is equal to Train 2: false
+
+4. Testing getArrivalTime method:
+	Train 1 arrives at 14:00
+
+5. Testing addPassengers method:
+	Adding 20 passengers to Train 1 returns true. It now has 90 passengers.
+
+6. Testing isFull method:
+	Train 1 is full: false
+
+7. Testing isCheaper method:
+	Train 1 is cheaper than Train 2: true
+
+8. Testing totalPrice method:
+	Train 1 total price is: 900
+
+9. Testing arrivesEarlier method:
+	Train 1 arrives earlier than Train 2: true
+
+********** Test Train - Finished **********
+
