@@ -1,84 +1,127 @@
-********** Test Time1 - Started **********
-
+********** Test Train - Started **********
 
 1. Testing Constructors and toString:
-	t1=17:45
-	t2=17:45
-	t33=00:00
+	Train 1: Train to Paris departs at 12:30. Train is not full.
+	Train 2: Train to Paris departs at 12:30. Train is not full.
+	Train :	 getDestination:{duration = -6, pass = 150,seats =  10 ,price = 10} 	 getDuration:0	 getPassengers:10	 getSeats:10	 getPrice:10	 getDeparture:12:30
+	Train :	 getDestination:{h=25,duration = 90, pass = 70 ,seats = 100 ,price = 10}	 getDuration:90	 getPassengers:70	 getSeats:100	 getPrice:10	 getDeparture:00:30
+	Train :	 getDestination:{m=65,duration = 90, pass = 70 ,seats = -10 ,price = 10}	 getDuration:90	 getPassengers:0	 getSeats:0	 getPrice:10	 getDeparture:12:00
+	Train :	 getDestination:{m=-30,duration = 90, pass = 70 ,seats =  10 ,price = 10}	 getDuration:90	 getPassengers:10	 getSeats:10	 getPrice:10	 getDeparture:12:00
+	Train :	 getDestination:{h=-12duration = 90, pass = -70 ,seats = 100 , price =-10}	 getDuration:90	 getPassengers:0	 getSeats:100	 getPrice:0	 getDeparture:00:30
 
 2. Testing accessors and mutators:
-	t1=20:10
-	Hour   of t1=20
-	Minute of t1=10
+	Train 1 destination: Paris
+	Train 1 departure: 12:30
+	Train 1 duration: 90
+	Train 1 passengers: 70
+	Train 1 seats: 100
+	Train 1 price: 10
 
-2. Testing out of range setters:
-	t1=00:00
-	Hour   of t33=0
-	Minute of t33=0
+**** test setters **** 
+	Train :	 getDestination: London
+	before Departure : 00:30
 
-3. Testing minFromMidnight method:
-	t1=10:15
-	Minutes from midnight of t1=615
+	Departure : set (-17, 15) :	 get: 00:15
+	Departure : set (17, 15) :	 get: 17:15
 
-3. Testing minFromMidnight method:
-	t33=00:00
-	Minutes from midnight of t33=0
+	before Duration : 90
+	Duration : set (10) :	 get: 10
+	Duration : set (0) :	 get: 0
+	Duration : set (-0) :	 get: 0
+	Duration : set (360) :	 get: 360
 
-3. Testing minFromMidnight method:
-	t1=23:59
-	Minutes from midnight of t1=1439
+	before Passengers : 0
+	seats :100
+	setPassengers: (-10) : get: 0
+	setPassengers: (150) : get: 100
+	setPassengers: (0)   : get: 0
+	setPassengers: (80)  : get: 80
 
-4. Testing equals method:
-	t3=12:34
-	t4=23:45
-	t33=23:45
-	t3=12:34 = t4=23:45 ? false
-	t33=23:45 = t4=23:45 ? true
-	t34=23:46 = t4=23:45 ? false
-	t35=22:45 = t4=23:45 ? false
+	before Seats : 100
+	Passengers :80
+	setSeats: (70)  : get: 100
+	setSeats: (85)  : get: 85
+	setSeats: (0)   : get: 85
+	setSeats: (-10)  : get: 85
+	setSeats: (100)  : get: 100
 
-5. Testing before method:
-	t3=12:34 before t4=23:45 ? true
-	t33=23:45 before t4=23:45 ? false
-	t34=23:46 before t4=23:45 ? false
-	t35=22:45 before t4=23:45 ? true
-	t35=23:44 before t4=23:45 ? true
+	before Price: 0
+	setPrice: (50)  : get: 50
+	setPrice: (-50)  : get: 50
+	setPrice: (0)  : get: 0
+	setPrice: (100)  : get: 100
+End setters 
 
-6. Testing after method:
-	t3=12:34 after t4=23:45 ? false
-	t33=23:45 after t4=23:45 ? false
-	t34=23:46 after t4=23:45 ? true
-	t35=22:45 after t4=23:45 ? false
-	t35=23:44 after t4=23:45 ? false
 
-	t3=12:34 after t3=12:34 ? true
-	tt4=23:45 after t33=23:45 ? false
-	tt4=23:45 after t34=23:46 ? false
-	tt4=23:45 after t35=22:45 ? true
-	tt4=23:45 after t36=23:44 ? true
+3. Testing equal method:
+	 t1: same/50/12:30	 t2: same/50/12:30 is equal? 	true true
+	 t1: same/50/12:30	 t2: not same/50/12:30 is equal? 	false false
+	 t1: same/50/12:30	 t2: same/50/12:31 is equal? 	false false
+	 t1: same/50/12:30	 t2: same/50/13:30 is equal? 	false false
+	 t1: same/50/12:30	 t2: same/51/12:30 is equal? 	false false
+	 t1: same/50/12:30	 t2: same/50/12:30 is equal? 	true true
+End equals 
 
-7. Testing difference method:
-	t1=11:25
-	t2=10:15
-	The difference between 11:25 and 10:15 is : 70 min
-	The difference between 23:45 and 23:45 is : 0 min
-	The difference between 23:45 and 23:46 is : -1 min
-	The difference between 23:45 and 22:45 is : 60 min
-	The difference between 23:45 and 23:44 is : 1 min
 
-8. Testing addMinutes method:
-	t1=11:25
-	Adding 10 minutes to t1=11:35
-	Adding 20 minutes to 23:45= 00:05
-	Adding 48 hours and -5 min to 23:45= 23:40
-	Adding 48 hours and +5 min to 23:45= 23:50
-	Adding 48 hours to 23:45= 23:45
-	Adding -48 hours to 23:45= 23:45
-	Adding -48 hours to 23:45= 23:45
-	Adding -10 minutes to 00:05= 23:55
-	Adding -48 hours and -6 min to 00:05= 23:59
-	Adding -48 hours and +6 min to 00:05= 00:11
+4. Testing getArrivalTime method:
+Departure at: 00:00 Duration: 60 ArrivalTime: 01:00
+Departure at: 23:59 Duration: 61 ArrivalTime: 01:00
+Departure at: 00:00 Duration: 2880 ArrivalTime: 00:00
+Departure at: 00:30 Duration: 60 ArrivalTime: 01:30
+Departure at: 13:24 Duration: 46 ArrivalTime: 14:10
+End getArrivalTime 
 
-********** Test Time1 - Finished **********
 
+5. Testing addPassengers method:
+	before Passengers : 80
+	seats :100
+	addPassengers: (5)     : get: true	: 85
+	addPassengers: (150)   : get: false	: 85
+	addPassengers: (-10)   : get: true	: 75
+	addPassengers: (0)     : get: true	: 75
+	addPassengers: (3)     : get: true	: 78
+	addPassengers: (2)     : get: true	: 80
+	addPassengers: (80)    : get: false	: 80
+End addPassengers 
+
+
+6. Testing isFull method:
+	Passengers: 25	Seats: 25	is full:true
+	Passengers: 25	Seats: 50	is full:false
+	Passengers: 0	Seats: 0	is full:true
+End isFull 
+
+
+7. Testing isCheaper method:
+	is - price1: 10 < price2: 20 ?	  : true
+	is - price1: 20 < price2: 10 ?	  : false
+	is - price1: 20 < price2: 0 ?	  : false
+	is - price1: 0 < price2: 0 ?	  : false
+	is - price1: 10 < price2: 10 ?	  : false
+End isCheaper 
+
+
+8. Testing totalPrice method:
+	price: 10	Passengers: 25	 total: 250
+	price: 20	Passengers: 0	 total: 0
+	price: 0	Passengers: 20	 total: 0
+	price: 0	Passengers: 0	 total: 0
+End totalPrice 
+
+
+9. Testing arrivesEarlier method:
+	Train 1 arrives earlier than Train 2: false
+	is - arr1: 01:00 before arr2: 00:30 ?	  : false
+	is - arr1: 01:00 before arr2: 02:00 ?	  : true
+	is - arr1: 01:00 before arr2: 01:01 ?	  : true
+	is - arr1: 01:00 before arr2: 00:59 ?	  : false
+	is - arr1: 01:00 before arr2: 01:00 ?	  : false
+
+	is - arr1: 00:30 before arr2: 01:00 ?	  : true
+	is - arr1: 02:00 before arr2: 01:00 ?	  : false
+	is - arr1: 01:01 before arr2: 01:00 ?	  : false
+	is - arr1: 00:59 before arr2: 01:00 ?	  : true
+	is - arr1: 01:00 before arr2: 01:00 ?	  : false
+
+********** Test Train - Finished **********
 
