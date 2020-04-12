@@ -38,7 +38,7 @@
 	t35=22:45 = t4=23:45 ? false
 
 5. Testing before method:
-	t3=23:45 before t4=23:45 ? true
+	t3=12:34 before t4=23:45 ? true
 	t33=23:45 before t4=23:45 ? false
 	t34=23:46 before t4=23:45 ? false
 	t35=22:45 before t4=23:45 ? true
