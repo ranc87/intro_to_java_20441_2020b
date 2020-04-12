@@ -78,7 +78,7 @@ public class Time1Tester
         System.out.println("\tt35=" + t35+" after t4=" + t4+ " ? " + t35.after(t4) );
         System.out.println("\tt35=" + t36+" after t4=" + t4+ " ? " + t36.after(t4) );
 
-        System.out.println("\n\tt3=" + t3+" after t3=" + t3+ " ? " + t4.after(t3) );
+        System.out.println("\n\tt4=" + t4+" after t3=" + t3+ " ? " + t4.after(t3) );
         System.out.println("\ttt4=" + t4+" after t33=" + t33+ " ? " + t4.after(t33) );
         System.out.println("\ttt4=" + t4+" after t34=" + t34+ " ? " + t4.after(t34) );
         System.out.println("\ttt4=" + t4+" after t35=" + t35+ " ? " + t4.after(t35) );
