@@ -38,7 +38,7 @@
 	t35=22:45 = t4=23:45 ? false
 
 5. Testing before method:
-	t3=12:34 before t4=23:45 ? true
+	t3=23:45 before t4=23:45 ? true
 	t33=23:45 before t4=23:45 ? false
 	t34=23:46 before t4=23:45 ? false
 	t35=22:45 before t4=23:45 ? true
@@ -51,7 +51,7 @@
 	t35=22:45 after t4=23:45 ? false
 	t35=23:44 after t4=23:45 ? false
 
-	t3=12:34 after t3=12:34 ? true
+	t4=23:45 after t3=12:34 ? true
 	tt4=23:45 after t33=23:45 ? false
 	tt4=23:45 after t34=23:46 ? false
 	tt4=23:45 after t35=22:45 ? true
@@ -80,5 +80,3 @@
 	Adding -48 hours and +6 min to 00:05= 00:11
 
 ********** Test Time1 - Finished **********
-
-
