@@ -114,3 +114,6 @@ public class Time2Tester
 
 
         System.out.println("\n********** Test Time2 - Finished **********\n");
+
+    }
+}
