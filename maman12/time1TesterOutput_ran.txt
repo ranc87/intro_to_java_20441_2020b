@@ -4,14 +4,21 @@
 1. Testing Constructors and toString:
 	t1=17:45
 	t2=17:45
+	t134=07:05
 	t33=00:00
 
 2. Testing accessors and mutators:
 	t1=20:10
 	Hour   of t1=20
 	Minute of t1=10
+	t1=15:30
+	Hour   of t1=15
+	Minute of t1=30
 
 2. Testing out of range setters:
+	t1=00:00
+	Hour   of t33=0
+	Minute of t33=0
 	t1=00:00
 	Hour   of t33=0
 	Minute of t33=0
@@ -74,7 +81,7 @@
 	Adding 48 hours and +5 min to 23:45= 23:50
 	Adding 48 hours to 23:45= 23:45
 	Adding -48 hours to 23:45= 23:45
-	Adding -48 hours to 23:45= 23:45
+	Adding -49 hours to 23:45= 22:45
 	Adding -10 minutes to 00:05= 23:55
 	Adding -48 hours and -6 min to 00:05= 23:59
 	Adding -48 hours and +6 min to 00:05= 00:11
