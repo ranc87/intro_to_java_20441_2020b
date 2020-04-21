@@ -58,7 +58,7 @@ public class TrainTester {
         tst.setDuration(0);
         System.out.println("\tDuration : set (0) :\t get: " + tst.getDuration());
         tst.setDuration(-10);
-        System.out.println("\tDuration : set (-0) :\t get: " + tst.getDuration());
+        System.out.println("\tDuration : set (-10) :\t get: " + tst.getDuration());
         tst.setDuration(360);
         System.out.println("\tDuration : set (360) :\t get: " + tst.getDuration());
         System.out.println("");
