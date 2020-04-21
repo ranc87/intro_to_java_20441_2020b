@@ -27,7 +27,7 @@
 	before Duration : 90
 	Duration : set (10) :	 get: 10
 	Duration : set (0) :	 get: 0
-	Duration : set (-0) :	 get: 0
+	Duration : set (-10) :	 get: 0
 	Duration : set (360) :	 get: 360
 
 	before Passengers : 0
