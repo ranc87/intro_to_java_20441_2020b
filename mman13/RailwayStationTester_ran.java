@@ -1,5 +1,5 @@
 /**
- * 2020b - 06/03/2020
+ * 2020b - 03/05/2020
  */
 
 import java.util.Random;
@@ -29,6 +29,21 @@ public class RailwayStationTester_ran {
         System.out.println("\t f: \t" + rs.addTrain(f13) + "\t;\t" + f13);
         System.out.println("\t f: \t" + rs.addTrain(f14) + "\t;\t" + f14);
 
+        Train tst1 = new Train("same", 12, 30, 60, 25, 50, 10);
+        Train tst2 = new Train("same", 12, 30, 61, 41, 50, 11);
+        Train tst3 = new Train("not same", 12, 30, 60, 40, 50, 10);
+        Train tst4 = new Train("same", 12, 31, 60, 40, 50, 10);
+        Train tst5 = new Train("same", 13, 30, 60, 40, 50, 10);
+        Train tst6 = new Train("same", 12, 30, 61, 40, 51, 10);
+
+        System.out.println("\t t: \t" + rs.addTrain(tst1) + "\t;\t" + tst1);
+        System.out.println("\t f: \t" + rs.addTrain(tst2) + "\t;\t" + tst2);
+        System.out.println("\t t: \t" + rs.addTrain(tst3) + "\t;\t" + tst3);
+        System.out.println("\t t: \t" + rs.addTrain(tst4) + "\t;\t" + tst4);
+        System.out.println("\t t: \t" + rs.addTrain(tst5) + "\t;\t" + tst5);
+        System.out.println("\t t: \t" + rs.addTrain(tst6) + "\t;\t" + tst6);
+
+
 
         RailwayStation rs_full = new RailwayStation();
         for (int i = 0; i <= 150; i++)
@@ -37,24 +52,39 @@ public class RailwayStationTester_ran {
         System.out.print(rs_full.addTrain(new Train("Not Same", 0, 0, 210, 25, 0, 55)));
         System.out.println("\t;\tAdd one to full RailwayStation\t");
 
+        System.out.print("\t f:\t \t");
+        System.out.print(rs.addTrain(null));
+        System.out.println("\t;\tAdd null train\t");
+
+
         System.out.println("\n");
 
         System.out.println("2. check removeTrain:");
         //need to check holes after remove.
         //RemoveTrain
+//        System.out.println(rs);
         RailwayStation rs_empty = new RailwayStation();
-        System.out.println("\tt:\t regular remove f11:    \t" + rs.removeTrain(f11));
+        System.out.println("\tt:\t regular remove f11:    \t" + rs.removeTrain(tst3));
+//        System.out.println(rs);
         System.out.print("\tf:\t remove not exist one : \t");
         System.out.println(rs_full.removeTrain(new Train("Not Same", 0, 0, 210, 25, 0, 55)));
         System.out.print("\tf:\t remove when empty :    \t");
         System.out.println(rs_empty.removeTrain(new Train("Not Same", 0, 0, 210, 25, 0, 55)));
+        System.out.println("\tf:\t remove null train :\t\t" +rs.removeTrain(null));
+
+
 
 
         //First Train to Destination
+        RailwayStation rs_one_train = new RailwayStation();
         Train f3a = new Train("Tel-Aviv", 7, 15, 180, 200, 200, 35);
         rs.addTrain(f3a);
         Train f3 = new Train("Tel-Aviv", 11, 35, 180, 100, 200, 35);
         rs.addTrain(f3);
+
+        f11 =  new Train("Tel-Aviv", 23, 59, 180, 200, 200, 35);
+        rs_one_train.addTrain(f11);
+
 
         Train f3b = new Train("Tel-Aviv", 8, 14, 180, 200, 199, 35);
 
@@ -64,14 +94,25 @@ public class RailwayStationTester_ran {
         System.out.println("3. check firstDepartureToDestination:");
 
         Time1 t1 = rs.firstDepartureToDestination("Tel-Aviv");
-        System.out.println("\t07:15:\tThe first train to Tel-Aviv departs at  \t" + t1);
+        System.out.println("\t07:15:\tThe first train to Tel-Aviv departs at  " + t1);
+
+        Time1 t11 = rs_one_train.firstDepartureToDestination("Tel-Aviv");
+        System.out.println("\t23:59:\tThe first train to Tel-Aviv departs at  " + t11);
+
+        rs_one_train.removeTrain(f11);
+        rs_one_train.removeTrain(f11);
 
         Time1 t2 = rs_full.firstDepartureToDestination("Tel-Aviv");
-        System.out.println("\tnull:\tThe Destination not there:  \t" + t2);
+        System.out.println("\tnull:\tThe Destination not there:  \t\t\t" + t2);
 
         Time1 t3 = rs_empty.firstDepartureToDestination("Haifa");
-        System.out.println("\tnull:\tThe RailwayStation is empty:  \t" + t3);
+        System.out.println("\tnull:\tThe RailwayStation is empty:   \t\t\t" + t3);
+
+        Time1 t4 = rs.firstDepartureToDestination(null);
+        System.out.println("\tnull:\tThe Destination is null:   \t\t\t\t" + t4);
+
         System.out.println();
+
 
         //toString
         System.out.println("4. toString:");
@@ -110,13 +151,7 @@ public class RailwayStationTester_ran {
         System.out.println("Longest Train when empty - " + rs_empty.longestTrain());
 
 
-        Train tst1 = new Train("same", 12, 30, 60, 25, 50, 10);
-        Train tst2 = new Train("same", 12, 30, 61, 41, 50, 11);
-        Train tst3 = new Train("not same", 12, 30, 60, 40, 50, 10);
-        Train tst4 = new Train("same", 12, 31, 60, 40, 50, 10);
-        Train tst5 = new Train("same", 13, 30, 60, 40, 50, 10);
-        Train tst6 = new Train("same", 12, 30, 61, 40, 51, 10);
-        rsSmall.addTrain(f11);
+
 
 
     }
