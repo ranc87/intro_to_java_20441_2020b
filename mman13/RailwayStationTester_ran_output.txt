@@ -3,41 +3,56 @@
 	 t: 	true	;	Train to Jerusalem departs at 10:50. Train is full.
 	 f: 	false	;	Train to Jerusalem departs at 10:50. Train is full.
 	 f: 	false	;	Train to Jerusalem departs at 10:50. Train is full.
+	 t: 	true	;	Train to same departs at 12:30. Train is not full.
+	 f: 	false	;	Train to same departs at 12:30. Train is not full.
+	 t: 	true	;	Train to not same departs at 12:30. Train is not full.
+	 t: 	true	;	Train to same departs at 12:31. Train is not full.
+	 t: 	true	;	Train to same departs at 13:30. Train is not full.
+	 t: 	true	;	Train to same departs at 12:30. Train is not full.
 	 f:	 	false	;	Add one to full RailwayStation	
+	 f:	 	false	;	Add null train	
 
 
 2. check removeTrain:
 	t:	 regular remove f11:    	true
 	f:	 remove not exist one : 	false
 	f:	 remove when empty :    	false
+	f:	 remove null train :		false
 
 3. check firstDepartureToDestination:
-	07:15:	The first train to Tel-Aviv departs at  	07:15
-	null:	The Destination not there:  	null
-	null:	The RailwayStation is empty:  	null
+	07:15:	The first train to Tel-Aviv departs at  07:15
+	23:59:	The first train to Tel-Aviv departs at  23:59
+	null:	The Destination not there:  			null
+	null:	The RailwayStation is empty:   			null
+	null:	The Destination is null:   				null
 
 4. toString:
 	 empty: 	There are no trains today.
 The trains today are:
+Train to Haifa departs at 12:00. Train is full.
 Train to Jerusalem departs at 10:50. Train is full.
+Train to same departs at 12:30. Train is not full.
+Train to same departs at 12:30. Train is not full.
+Train to same departs at 12:31. Train is not full.
+Train to same departs at 13:30. Train is not full.
 Train to Tel-Aviv departs at 07:15. Train is full.
 Train to Tel-Aviv departs at 11:35. Train is not full.
 Train to Tel-Aviv departs at 08:14. Train is full.
 
 
 5. How Many Full Trains:
-rs_reg: number if Full Trains - 3
+rs_reg: number if Full Trains - 4
 rs_empty:   - 0
 rs all available :  - 0
 
 6. Most Popular Destination:
-Most Popular Destination - Tel-Aviv
+Most Popular Destination - same
 rs_empty:   - null
 rs all  rio :  - rio
 
 7. Most Expensive Ticket:
-Most Expensive Ticket - Train to Jerusalem departs at 10:50. Train is full.
+Most Expensive Ticket - Train to Haifa departs at 12:00. Train is full.
 
 8. Longest Train:
-Longest Train - Train to Jerusalem departs at 10:50. Train is full.
+Longest Train - Train to Haifa departs at 12:00. Train is full.
 Longest Train when empty - null
