@@ -15,15 +15,20 @@ public class RailwayStationTester_ran {
         System.out.println("1. check addTrain:");
         RailwayStation rs = new RailwayStation();
         RailwayStation rsSmall = new RailwayStation();
-
+        RailwayStation rsEmptyDes = new RailwayStation();
+        RailwayStation rsTestCost = new RailwayStation();
+        
 
         //AddTrain
         Train f11 = new Train("Haifa", 12, 0, 210, 250, 250, 55);
         Train f12 = new Train("Jerusalem", 10, 50, 210, 250, 250, 40);
         Train f13 = new Train("Jerusalem", 10, 50, 210, 250, 250, 40);
         Train f14 = new Train("Jerusalem", 10, 50, 210, 250, 250, 40);
-
-
+        Train f15 = new Train("Tel-Aviv", 10, 50, 210, 250, 250, 40);
+        Train f16 = new Train("", 22, 22, 210, 250, 250, 40);
+        Train f17 = new Train("Amsterdam", 12, 0, 210, 250, 250, 40);
+        Train f18 = new Train("Berlin", 13, 0, 210, 250, 250, 40);
+        
         System.out.println("\t t: \t" + rs.addTrain(f11) + "\t;\t" + f11);
         System.out.println("\t t: \t" + rs.addTrain(f12) + "\t;\t" + f12);
         System.out.println("\t f: \t" + rs.addTrain(f13) + "\t;\t" + f13);
@@ -61,6 +66,8 @@ public class RailwayStationTester_ran {
 
         System.out.println("2. check removeTrain:");
         //need to check holes after remove.
+        
+        
         //RemoveTrain
 //        System.out.println(rs);
         RailwayStation rs_empty = new RailwayStation();
@@ -82,9 +89,8 @@ public class RailwayStationTester_ran {
         Train f3 = new Train("Tel-Aviv", 11, 35, 180, 100, 200, 35);
         rs.addTrain(f3);
 
-        f11 =  new Train("Tel-Aviv", 23, 59, 180, 200, 200, 35);
+        f11 =  new Train("Tokyo", 23, 59, 180, 200, 200, 35);
         rs_one_train.addTrain(f11);
-
 
         Train f3b = new Train("Tel-Aviv", 8, 14, 180, 200, 199, 35);
 
@@ -110,7 +116,11 @@ public class RailwayStationTester_ran {
 
         Time1 t4 = rs.firstDepartureToDestination(null);
         System.out.println("\tnull:\tThe Destination is null:   \t\t\t\t" + t4);
-
+        
+        rsEmptyDes.AddTrain(f16);
+        Time1 t5 = rsEmptyDes.firstDepartureToDestination("");
+        System.out.println("\t22:22:\tThe Destination time is:   \t\t\t\t" + t5);
+        
         System.out.println();
 
 
@@ -119,7 +129,8 @@ public class RailwayStationTester_ran {
         System.out.println("\t empty: \t" + rs_empty);
         System.out.println("" + rs);
         System.out.println();
-
+        System.out.println(rs_one_train);
+        System.out.println();
 
         //HowMany Full Trains
         System.out.println("5. How Many Full Trains:");
@@ -135,24 +146,29 @@ public class RailwayStationTester_ran {
         System.out.println("Most Popular Destination - " + mostPopular);
         System.out.println("rs_empty:   - " + rs_empty.mostPopularDestination());
         System.out.println("rs all  rio :  - " + rs_full.mostPopularDestination());
+        System.out.println("rs one Tokyo:  - " + rs_one_train.mostPopularDestination());
         System.out.println();
 
         //Most Expensive Ticket
+        rsTestCost.AddTrain(f17);
+        rsTestCost.AddTrain(f18);
+        rsTestCost.AddTrain(f12);
+        rsTestCost.AddTrain(f15);
+        
         System.out.println("7. Most Expensive Ticket:");
         Train mostExpensive = rs.mostExpensiveTicket();
         System.out.println("Most Expensive Ticket - " + mostExpensive);
+        System.out.println("Most Expensive Ticket - Amsterdam" + rsTestCost.mostExpensiveTicket());
+        System.out.println("Most Expensive Ticket - null" + rs_empty.mostExpensiveTicket());
         System.out.println();
-
+        
 
         //Longest Train
         System.out.println("8. Longest Train:");
         Train longestTrain = rs.longestTrain();
         System.out.println("Longest Train - " + longestTrain);
         System.out.println("Longest Train when empty - " + rs_empty.longestTrain());
-
-
-
-
+        System.out.println("Longest Train - Amsterdam" + rsTestCost.longestTrain());
 
     }
 }
