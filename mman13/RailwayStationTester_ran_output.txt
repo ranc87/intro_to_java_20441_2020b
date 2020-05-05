@@ -25,9 +25,12 @@
 	null:	The Destination not there:  			null
 	null:	The RailwayStation is empty:   			null
 	null:	The Destination is null:   				null
+	22:22:	The Destination time is "":   			22:22
 
 4. toString:
-	 empty: 	There are no trains today.
+empty: 
+There are no trains today.
+
 The trains today are:
 Train to Haifa departs at 12:00. Train is full.
 Train to Jerusalem departs at 10:50. Train is full.
@@ -39,20 +42,30 @@ Train to Tel-Aviv departs at 07:15. Train is full.
 Train to Tel-Aviv departs at 11:35. Train is not full.
 Train to Tel-Aviv departs at 08:14. Train is full.
 
+The trains today are:
+Train to Tokyo departs at 23:59. Train is full.
+
+is to string ok: true	true
+
 
 5. How Many Full Trains:
-rs_reg: number if Full Trains - 4
-rs_empty:   - 0
-rs all available :  - 0
+	4	 - rs_reg: number if Full Trains - 4
+	0	 - rs_empty:   - 0
+	0	 - rs all not Full :  - 0
+	100	 - rs all full :  - 100
 
 6. Most Popular Destination:
-Most Popular Destination - same
-rs_empty:   - null
-rs all  rio :  - rio
+	same 	 - same
+	null 	 - null
+	rio  	 - rio
+	Tokyo	 - Tokyo
 
 7. Most Expensive Ticket:
-Most Expensive Ticket - Train to Haifa departs at 12:00. Train is full.
+	Haifa    	 - Most Expensive Ticket - Train to Haifa departs at 12:00. Train is full.
+	Amsterdam	 - Most Expensive Ticket - Train to Amsterdam departs at 12:00. Train is full.
+	null     	 - Most Expensive Ticket - null
 
 8. Longest Train:
-Longest Train - Train to Haifa departs at 12:00. Train is full.
-Longest Train when empty - null
+	Haifa    	 - Longest Train - Train to Haifa departs at 12:00. Train is full.
+	Amsterdam	 - Longest Train - Train to Amsterdam departs at 12:00. Train is full.
+	null     	 - Longest Train - null
