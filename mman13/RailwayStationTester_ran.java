@@ -124,12 +124,14 @@ public class RailwayStationTester_ran {
         System.out.println("4. toString:");
         System.out.println("empty: \n" + rs_empty);
         System.out.println("\n" + rs);
-        System.out.println();
         System.out.println(rs_one_train);
-        System.out.println();
-        String shouldBe =  "The trains today are:\nTrain to Tokyo departs at 23:59. Train is full.";
+
+        String shouldBeA =  "The trains today are:\nTrain to Tokyo departs at 23:59. Train is full.\n";
+        String shouldBeB =  "The trains today are:\nTrain to Tokyo departs at 23:59. Train is full\n";
         String shouldBeEmpty =  "There are no trains today.";
-        System.out.println("is to string ok: " +  shouldBe.equals(rs_one_train.toString())+"\t" +  shouldBeEmpty.equals(rs_empty.toString()) );
+
+        System.out.println("is to string ok: " +  (shouldBeA.equals(rs_one_train.toString()) || shouldBeB.equals(rs_one_train.toString()) ) +"\t"
+                +  shouldBeEmpty.equals(rs_empty.toString()) );
         System.out.println();
         System.out.println();
 
