@@ -45,7 +45,9 @@ Train to Tel-Aviv departs at 08:14. Train is full.
 The trains today are:
 Train to Tokyo departs at 23:59. Train is full.
 
-is to string ok: true	true
+is to string ok:
+	 check regular station - true
+	 check empty station - true
 
 
 5. How Many Full Trains:
