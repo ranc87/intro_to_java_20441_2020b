@@ -1,0 +1,83 @@
+------------------------------------
+Testing Question 1
+------------------------------------
+
+Test for input:  {16,23,30,13,14,21,19,15}
+Amir took 16
+Tamar took 23
+Amir took 30
+Tamar took 15
+Amir took 19
+Tamar took 21
+Amir took 14
+Tamar took 13
+Final Score:
+Amir total 79
+Tamar total 72
+----- end of test no  0-----
+Test for input:  {1,1,1,1,2,1,1,1}
+Amir took 1
+Tamar took 1
+Amir took 1
+Tamar took 1
+Amir took 2
+Tamar took 1
+Amir took 1
+Tamar took 1
+Final Score:
+Amir total 5
+Tamar total 4
+----- end of test no  1-----
+Test for input:  {1,1,1,2,1,1,1,1}
+Amir took 1
+Tamar took 1
+Amir took 1
+Tamar took 1
+Amir took 2
+Tamar took 1
+Amir took 1
+Tamar took 1
+Final Score:
+Amir total 5
+Tamar total 4
+----- end of test no  2-----
+Test for input:  {2,1,3,4}
+Amir took 4
+Tamar took 3
+Amir took 1
+Tamar took 2
+Final Score:
+Amir total 5
+Tamar total 5
+----- end of test no  3-----
+Test for input:  {8,5,6,9,4,7,12,9}
+Amir took 9
+Tamar took 12
+Amir took 7
+Tamar took 8
+Amir took 5
+Tamar took 6
+Amir took 9
+Tamar took 4
+Final Score:
+Amir total 30
+Tamar total 30
+----- end of test no  4-----
+Test for input:  {1,1,1,9}
+Amir took 9
+Tamar took 1
+Amir took 1
+Tamar took 1
+Final Score:
+Amir total 10
+Tamar total 2
+----- end of test no  5-----
+Test for input:  {9,1,1,1}
+Amir took 9
+Tamar took 1
+Amir took 1
+Tamar took 1
+Final Score:
+Amir total 10
+Tamar total 2
+----- end of test no  6-----
