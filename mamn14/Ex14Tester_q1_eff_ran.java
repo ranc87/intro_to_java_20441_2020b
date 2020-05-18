@@ -1,5 +1,5 @@
-// *************   remove all print befor running!!!!!!!!!!!!!! ******************
-
+// *************   remove all print from win befor running!!!!!!!!!!!!!! ******************
+//this tester check efficiency
 
 import java.util.Random;
 import java.util.Arrays;
